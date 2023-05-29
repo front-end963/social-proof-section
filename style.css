@@ -1,0 +1,202 @@
+/* starting mobile design first to load faster on mobile devices */
+
+:root {
+    --VeryDarkMagenta: hsl(300, 43%, 22%);
+    --SoftPink: hsl(333, 80%, 67%);
+    --DarkGrayishMagenta: hsl(303, 10%, 53%);
+    --LightGrayishMagenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--LightGrayishMagenta);
+    background: url(./images/bg-pattern-top-mobile.svg) top no-repeat, url(./images/bg-pattern-bottom-mobile.svg) bottom no-repeat;
+    font-size: 0.938rem;
+    font-family: 'League Spartan', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: min(300px, 90%);
+    margin: 50px 0 50px 0;
+}
+
+h1, .rating h2 {
+    color: var(--VeryDarkMagenta);
+}
+
+h1 {
+    font-size: 1.563rem;
+    font-weight: 700;
+    padding: 0 40px 0 40px;
+    margin-bottom: 15px;
+}
+
+#intro-rating {
+    color: var(--DarkGrayishMagenta);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#intro-rating p {
+    margin-bottom: 25px;
+}
+
+.rating {
+    background-color: var(--LightGrayishMagenta);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.rating h2 {
+    font-size: 0.938rem;
+    padding: 5px;
+}
+
+span img {
+    padding: 2px;
+    width: 20px;
+    height: 20px;
+}
+
+.verified-buyer {
+    background-color: var(--VeryDarkMagenta);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.verified-buyer p {
+    color: var(--White);
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.verified-buyer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.info {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.name {
+    margin-left: 15px;
+    display: flex;flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.info h2 {
+    font-size: 0.875rem;
+    color: var(--White);
+}
+
+.info h3 {
+    font-size: 0.875rem;
+    color: var(--SoftPink);
+    margin-top: 5px;
+}
+
+/* desktop design */
+
+@media screen and (min-width: 376px) {
+
+    body {
+        background: url(./images/bg-pattern-top-desktop.svg) no-repeat, url(./images/bg-pattern-bottom-desktop.svg) bottom right no-repeat;
+        justify-content: center;
+    }
+
+    main {
+        width: 70%;
+        margin: 100px 0 0 0;
+    }
+
+    #verified-buyers {
+        display: flex;
+        height: 350px;
+    }
+
+    .verified-buyer {
+        margin-right: 30px;
+        height: 60%;
+    }
+
+    .verified-buyer:nth-of-type(2) {
+        margin-top: 20px;
+    }
+
+    .verified-buyer:nth-of-type(3) {
+        margin-top: 40px;
+    }
+
+    #intro-rating {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: start;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        padding: 0 60px 0 0;
+        margin-bottom: 30px;
+    }
+    
+    #intro {
+        width: 30%;
+    }
+
+    #rate-align {
+        margin-left: 185px;
+    }
+
+    #intro p {
+        line-height: 25px;
+        font-size: 1.063rem;
+        font-weight: 500;
+    }
+
+    .rating {
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+    }
+
+    .rating h2 {
+        margin-left: 20px;
+    }
+
+    .rating:nth-of-type(2) {
+        margin-left: 100px;
+    }
+
+    .rating:nth-of-type(3) {
+        margin-left: 200px;
+    }
+
+}
